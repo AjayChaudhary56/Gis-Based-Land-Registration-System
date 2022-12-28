@@ -9,7 +9,6 @@ function App() {
       <Router>
       <Navbar />
         <Routes>
-         
           <Route path="/user" element={<Usersidebar />} />
           <Route path="/user/search" element={<Search />} />
 

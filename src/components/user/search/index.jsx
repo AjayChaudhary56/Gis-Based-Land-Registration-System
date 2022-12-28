@@ -61,9 +61,12 @@ const Search = () => {
     <div className="main-content">
         <div className="searchbar">
 
-       <input placeholder='Search by Location or Parcel no'/>
-       <button ><GoSearch  className='' /> Search </button> 
-       <button className='button2'> Filter <BiFilterAlt /> </button>
+       <input placeholder='    Search by Location or Parcel no'/>
+       
+       <button >Search  </button> 
+      
+       
+       <button>Filter </button>
         </div>
         <div className="gismap">
            <img src={map} alt='map pics'/>
