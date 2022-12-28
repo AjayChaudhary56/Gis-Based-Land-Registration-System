@@ -1,12 +1,19 @@
 import "./App.css";
-
-import { BrowserRouter as Router, Routes } from "react-router-dom";
-
+import Navbar from "./containers/navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Usersidebar from "./containers/sidebar";
+import Search from "./components/user/search";
 function App() {
   return (
     <>
       <Router>
-        <Routes></Routes>
+      <Navbar />
+        <Routes>
+         
+          <Route path="/user" element={<Usersidebar />} />
+          <Route path="/user/search" element={<Search />} />
+
+        </Routes>
       </Router>
     </>
   );
