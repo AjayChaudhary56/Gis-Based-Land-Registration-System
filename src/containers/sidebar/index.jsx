@@ -61,4 +61,4 @@ const Usersidebar = () => {
   )
 }
 
-export default Usersidebar
+export default Usersidebar;

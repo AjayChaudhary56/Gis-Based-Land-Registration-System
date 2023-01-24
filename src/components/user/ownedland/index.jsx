@@ -8,6 +8,9 @@ import {BsQuestionCircleFill} from 'react-icons/bs'
 import {MdNotificationsActive} from 'react-icons/md'
 import {HiOutlineLogout} from 'react-icons/hi'
 import './style.css'
+import Reacthookform from '../addland/form'
+
+
 const Userownedland = () => {
   return (
     <div className='sidebar-all-content'>
@@ -55,7 +58,7 @@ const Userownedland = () => {
             </ul>
         </div>
         <div className="main-content">
-
+              <Reacthookform/>
         </div>
     </div>
   )

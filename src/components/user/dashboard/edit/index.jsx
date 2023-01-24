@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { GoSearch } from "react-icons/go";
 import { MdDashboard } from "react-icons/md";
@@ -7,10 +7,34 @@ import { RiMapPinUserFill } from "react-icons/ri";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { MdNotificationsActive } from "react-icons/md";
 import { HiOutlineLogout } from "react-icons/hi";
-import profile from "./profile.jpg";
+import axios from "axios";
 
 import "./style.css";
-const Userdashboard = () => {
+const Userdashboardedit = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const age = e.target.age.value;
+    const address = e.target.address.value;
+    const emailId = e.target.emailId.value;
+    const citizenshipNumber = e.target.citizenshipNumber.value;
+    axios
+      .post("http://localhost:3000/", {
+        name,
+        age,
+        address,
+        emailId,
+        citizenshipNumber,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="sidebar-all-content">
       <div className="sidebar-main">
@@ -48,23 +72,32 @@ const Userdashboard = () => {
         </ul>
       </div>
       <div className="dashboard-main-content">
-        <h1> Your Profile</h1>
-        <div className="profile">
-          <div className="profile-pic">
-       <img src={profile} alt="profile pic" />
-          </div>
-          <div className="profile-description">
-           <h3>Name:Ajay Chaudhary</h3>
-           <h3>Age: 23</h3>
-           <h3> Address:Lamachaur,Pokhara</h3>
-           <h3>Citizenship Number:037845-84-436-55</h3>
-           <h3>Email Id:iamazoy110125@gmail.com</h3>
-           <button><Link to='/user/dashboardedit'>Edit</Link></button>
-          </div>
-        </div>
+        <form onSubmit={handleSubmit()}>
+          <input id="name" name="name" placeholder="Name" type="text" />
+          <input id="age" name="age" placeholder="Age" type="number" />
+          <input
+            id="address"
+            name="address"
+            placeholder="Address"
+            type="text"
+          />
+          <input
+            id="emaiId"
+            name="emailId"
+            placeholder="Email Id"
+            type="text"
+          />
+          <input
+            id="citizenshipNumber"
+            name="citizenshipNumber"
+            placeholder="Citizenship-number"
+            type="text"
+          />
+          <button>Submit</button>
+        </form>
       </div>
     </div>
   );
 };
 
-export default Userdashboard;
+export default Userdashboardedit;

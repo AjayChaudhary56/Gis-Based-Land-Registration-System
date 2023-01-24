@@ -1,0 +1,43 @@
+form { 
+    background-color: aliceblue;
+    height: 800px;
+    width:60%;
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-around;
+    margin-top: 20px;
+     border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  
+  h1 { 
+    margin-left: 40%;
+
+  }
+ 
+  .field{
+    height:50px;
+    font-size: larger;
+   padding-left: 90px;
+  }
+
+  
+  .field input{
+    margin-top: 5px;
+    height:40px;
+    width:80%;
+    border-radius: 5px;
+  }
+  .button123{
+    margin-left: 37%;
+    width:20%;
+    color: aliceblue;
+    height:50px;
+    background-color: black;
+    border-radius: 5px;
+  }
+  p{
+   
+    color:red;
+    padding-top: 0px;
+  }
